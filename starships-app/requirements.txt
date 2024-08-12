@@ -1,0 +1,4 @@
+chalice==1.26.0
+PyJWT==2.9.0
+requests
+PyYAML==5.3.1
