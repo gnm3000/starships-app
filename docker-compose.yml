@@ -27,4 +27,4 @@ services:
     depends_on:
       - starships-app
     environment:
-      - docker_compose: true
+      - docker_compose=true
