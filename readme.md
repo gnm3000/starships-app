@@ -4,8 +4,27 @@
 
 Welcome to the technical challenge of implementing a full-stack application using the StarWars API. 
 
+### Start using Docker 
+To start clone the repository
+```
+git clone git@github.com:gnm3000/starships-app.git
+```
 
-### Prerequisites
+if you have docker compose and docker install in your machine
+For excecute in this way we use the file docker-compose.yml
+
+
+```
+docker compose up --build
+```
+Then go to localhost:3000
+
+### credentials
+Use user: "user1" password: "12345"
+
+
+
+### Prerequisites for Installation
 
 This project is using:
 - NextJS 14.x latest
@@ -18,14 +37,9 @@ This project is using:
 You will find two folders:
 - starship-frontend:  a NextJS 14.x app
 - starships-app:  the backend of the application using Python Chalice framework
+- bff: This is Backend-for-Frontend (The one NextJS is using)
 
-docker-compose.yml file is for run the complete project using docker compose
 
-Command using docker compose
-
-```
-docker compose up --build
-```
 
 This command will run two Dockerfiles
 - Frontend: starship-frontend/Dockerfile: building NextJS app using NodeJS
@@ -60,7 +74,7 @@ Backend for Frontend (running FastAPI)
 - cd bff
 - create virtualenv
 - pip install -r requirements.txt
-- port 5000
+- python bff_app.py
 
 ### Functional Requirements
 
@@ -74,10 +88,7 @@ This application has:
 - Backend: using pytest for Swapidev Class and for Chalice testing
 
 ### Deployment
-- The application can run on localhost using docker compose: 
-```
-docker compose up --build
-```
+- Localhost using docker-compose.
 
 
 
