@@ -1,0 +1,19 @@
+
+services:
+  starships-app:
+    build:
+      context: ./starships-app
+    ports:
+      - "8000:8000"
+    environment:
+      CHALICE_LOCAL: "true"
+
+  starships-frontend:
+    build:
+      context: ./starships-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: "development"
+    depends_on:
+      - starships-app
