@@ -10,7 +10,7 @@ services:
 
   starships-frontend:
     build:
-      context: ./starships-frontend
+      context: ./starship-frontend
     ports:
       - "3000:3000"
     environment:
