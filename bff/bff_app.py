@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import requests
 import os
 
-if "docker_compose" in os.environ:
+if "DOCKER_COMPOSE" in os.environ:
     BACKEND="starships-app"
 else:
     BACKEND="localhost"
@@ -44,7 +44,7 @@ async def get_manufacturers(request: Request):
     token = request.headers.get('Authorization')
     headers = {'Authorization': token}
 
-    response = requests.get('http://{BACKEND}:8000/manufacturers', headers=headers)
+    response = requests.get(f'http://{BACKEND}:8000/manufacturers', headers=headers)
     
     if response.status_code == 200:
         return response.json()
