@@ -45,7 +45,7 @@ const Starships = () => {
 
   const fetchManufacturers = async (token: string) => {
     try {
-      const response = await axios.get('http://localhost:8000/manufacturers', {
+      const response = await axios.get('http://localhost:5000/bff/manufacturers', {
         headers: { Authorization: `Bearer ${token}` },
       });
       // getting data from API manufacturers
@@ -60,8 +60,8 @@ const Starships = () => {
       // here we have the case when we want from specific manufacturer or not.
       // and we need to send the token that we get from context
       const url = manufacturer
-        ? `http://localhost:8000/starships?manufacturer=${manufacturer}`
-        : 'http://localhost:8000/starships';
+        ? `http://localhost:5000/bff/starships?manufacturer=${manufacturer}`
+        : 'http://localhost:5000/bff/starships';
       const response = await axios.get(url, {
         headers: { Authorization: `Bearer ${token}` },
       });
