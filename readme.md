@@ -4,6 +4,9 @@
 
 Welcome to the technical challenge of implementing a full-stack application using the StarWars API. 
 
+Video Available: https://streamable.com/18rvly
+
+
 ### Start using Docker 
 To start clone the repository
 ```
@@ -58,19 +61,21 @@ Endpoints:
 
 ### Instalation
 
-Frontend:
+Install NextJS for the Frontend:
 git clone git@github.com:gnm3000/starships-app.git
  - cd starship-frontend
  - npm install
  - npm run dev (http://localhost:3000)
 
-Backend:
+Install Chalice Framework for the Backend:
 - cd starships-app
 - create a virtualenv
 - pip install -r requirements.txt
+- export PYTHONPATH=$(pwd)
+- pytest
 - chalice local (Serving on http://127.0.0.1:8000)
 
-Backend for Frontend (running FastAPI)
+Install FastAPI for (BFF) Backend for Frontend (running FastAPI)
 - cd bff
 - create virtualenv
 - pip install -r requirements.txt
@@ -85,7 +90,8 @@ This application has:
 
 ### Testing
 
-- Backend: using pytest for Swapidev Class and for Chalice testing
+- Backend (starships-app): using pytest for Swapidev Class and for Chalice testing
+- You can do 
 
 ### Deployment
 - Localhost using docker-compose.
