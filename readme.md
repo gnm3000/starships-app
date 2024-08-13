@@ -8,13 +8,12 @@ Video Available: https://streamable.com/18rvly
 
 
 ### Start using Docker 
-To start clone the repository
+To start, clone the repository
 ```
 git clone git@github.com:gnm3000/starships-app.git
 ```
 
-if you have docker compose and docker install in your machine
-For excecute in this way we use the file docker-compose.yml
+If you have Docker Compose and Docker installed on your machine, to execute in this way, we use the file docker-compose.yml
 
 
 ```
@@ -22,7 +21,7 @@ docker compose up --build
 ```
 Then go to localhost:3000
 
-### credentials
+### Credentials
 Use user: "user1" password: "12345"
 
 
@@ -33,7 +32,7 @@ This project is using:
 - NextJS 14.x latest
 - Docker compose + Docker
 - npm latest
-- python 3.10
+- Python 3.10
 
 ### Structure
 
@@ -51,23 +50,24 @@ This command will run two Dockerfiles
 
 ### Backend Documentation
 
-Using Chalice, Framework for AWS lambdas development
+Using Chalice, Framework for AWS Lambda development
 Endpoints:
-- POST /login: using username and password it generated a JWT token
-- GET /starships: Return all starships that could be filtered using parameters.
+- POST /login: using username and password it generates a JWT token
+- GET /starships: Return all starships that can be filtered using parameters.
 -- GET /starships?manufacturer=Corellian Engineering Corporation&model=CR90 corvette
-- GET /manufacturers: Return all manufacturers available in starships endpoint with cache
+- GET /manufacturers: Return all manufacturers available in the starships endpoint with cache
 
-
-### Instalation
+### Installation
 
 Install NextJS for the Frontend:
+
 git clone git@github.com:gnm3000/starships-app.git
+
  - cd starship-frontend
  - npm install
  - npm run dev (http://localhost:3000)
 
-Install Chalice Framework for the Backend:
+Install Chalice Framework for the Backend:PYTHON
 - cd starships-app
 - create a virtualenv
 - pip install -r requirements.txt
@@ -90,7 +90,7 @@ This application has:
 
 ### Testing
 
-- Backend (starships-app): using pytest for Swapidev Class and for Chalice testing
+- Backend (starships-app): using pytest for Swapidev class and for Chalice testing
 - You can do 
 
 ### Deployment
@@ -101,19 +101,13 @@ This application has:
 
 
 ### Security Considerations
-- The application just have one user:
+- The application has just one user:
 -- username: user1
 -- password: 12345
 
 ### Conclusion
 
-When it's up, you can access to the frontend (:3000), login and visualize in a table starships and filter by manufacterer. The backend (starships-app) support filtering for more fields, but the backend for frontend (bff folder) use just manufacterer.
+When it's up, you can access to the frontend (:3000), login and visualize in a table starships and filter by manufacturer. The backend (starships-app) support filtering for more fields, but the backend for frontend (bff folder) use just manufacturer.
 
 
 
-
-### Instructions
-
-1. docker compose up --build
-
-2. user: user1 password: 12345

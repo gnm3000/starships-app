@@ -2,7 +2,7 @@ import time
 import requests
 from cacheout import Cache
 import logging
-# Obtener el logger ya configurado
+# Get the logger already setup
 logger = logging.getLogger(__name__)
 
 class Swapidev:
